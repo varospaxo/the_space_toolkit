@@ -6,6 +6,7 @@ import subprocess
 import geocoder
 import time
 from shapely import Point
+import os
 
 # Setup the world map in turtle module
 screen = turtle.Screen()
@@ -13,10 +14,16 @@ screen.setup(1280, 720)
 screen.setworldcoordinates(-180, -90, 180, 90)
 
 # load the world map image
-screen.bgpic("map.gif")
-screen.register_shape("iss.gif")
+rawmap = os.getcwd() + "\\img\\map.gif"
+# map = rawmap.replace('\\', '/')
+print (rawmap)
+rawissicon = os.getcwd() + "\\img\\iss.gif"
+# issicon = rawissicon.replace('\\', '/')
+print(rawissicon)
+screen.bgpic(rawmap)
+screen.register_shape(rawissicon)
 iss = turtle.Turtle()
-iss.shape("iss.gif")
+iss.shape(rawissicon)
 iss.setheading(45)
 iss.penup()
 
@@ -52,7 +59,9 @@ while True:
     
     #email trigger
     if user_area.contains(sat_position):
-        subprocess.call(['python', 'huihui.py'])
-        time.sleep(5)
-    time.sleep(1)
+        rawpath = os.getcwd() + "\\mail.py"
+        path = rawpath.replace('\\', '/')
+        subprocess.call(['python', path])
+        time.sleep(5000)
+    time.sleep(20)
     
