@@ -5,7 +5,7 @@ import urllib.request
 import subprocess
 import geocoder
 import time
-from shapely import Point
+from shapely.geometry import Point
 import os
 
 # Setup the world map in turtle module
