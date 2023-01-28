@@ -3,13 +3,15 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 sender_email = "crudespace@gmail.com"
-receiver_email = "vedantfar@gmail.com"
+receiver_email = "vedantfar@gmail.com,varospaxo@gmail.com"
 password = "qngnwmlokpwxtoka"
+cc = ""
 
 message = MIMEMultipart("alternative")
 message["Subject"] = "Email Test"
 message["From"] = sender_email
 message["To"] = receiver_email
+message["Cc"] = cc
 
 # Create the plain-text and HTML version of your message
 text = """\
@@ -41,5 +43,5 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     server.login(sender_email, password)
     server.sendmail(
-        sender_email, receiver_email, message.as_string()
+        message["From"], message["To"].split(",") + message["Cc"].split(","), message.as_string()
     )
