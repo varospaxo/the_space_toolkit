@@ -7,6 +7,7 @@ sns.set()
 import shutil
 import os
 import ctypes
+from wposcross import change_wallpaper
 
 url= "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
 r = requests.get(url)
@@ -24,7 +25,8 @@ if update == "y" or update == "yes":
     shutil.move("./wallpaper_temp.jpg", picture_path)
     rawpath = os.getcwd() + "/wallpaper_current.jpg"
     path = rawpath.replace('\\', '/')
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
+    # ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 0)
+    change_wallpaper(path)
     print(os.getcwd())
     print(rawpath)
     print(path)
