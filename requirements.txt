@@ -1,7 +1,7 @@
-pip install geocoder
-pip install shapely
-pip install wget
-pip install seaborn
-pip install requests
-pip install ast
-pip install ctypes
+geocoder
+shapely
+wget
+seaborn
+requests
+ast
+ctypes
