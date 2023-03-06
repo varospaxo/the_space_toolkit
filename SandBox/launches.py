@@ -38,6 +38,7 @@ def readapi():
             print("Vehicle Name: "+vehicle_name)
             print("Launchpad Name: "+pad_name)
             #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
+            print (pad_location_name)
             print(pad_state)
             print(pad_statename)
             print("Launchpad Country: "+pad_country)
