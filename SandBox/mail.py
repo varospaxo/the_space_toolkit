@@ -42,16 +42,17 @@ bcc = "farkadevedant@gmail.com, varospaxo@gmail.com"
 
 with open('./SandBox/launches_Notifier_OP.txt') as file:
   sub = file.readline().strip('Mission Name: ')
-  print (sub)
+  # print (sub)
+  
 message = MIMEMultipart("alternative")
-subject = "Next Space Launch: " + str(sub)
+subject = "Next Launch "+sub+" in one hour!"
 message["Subject"] = subject
 message["From"] = sender_email
 message["To"] = receiver_email
 message["Cc"] = cc
 # message["Bcc"] = ", ".join(bcc)
 message["Bcc"] = bcc
-print (message["Bcc"])
+# print (message["Bcc"])
 
 # string to store the body of the mail
 with open('./SandBox/launches_Notifier_OP.txt') as f:

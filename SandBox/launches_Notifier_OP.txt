@@ -1,12 +1,12 @@
-Mission Name: ALOS-3
-Vehicle Name: H-3
-Launchpad Name: LA-Y2
-Launchpad Location Name: Tanegashima Space Center
-Pad State: None
-Pad State Name: None
-Launchpad Country: Japan
+Mission Name: "Good Luck, Have Fun"
+Vehicle Name: Terran 1
+Launchpad Name: SLC-16
+Launchpad Location Name: Cape Canaveral SFS
+Pad State: FL
+Pad State Name: Florida
+Launchpad Country: United States
 Mission Description: None
-Launch Description: A Mitsubishi Heavy Industries H-3 rocket will launch the ALOS-3 mission on Tuesday, March 7, 2023 at 1:37 AM (UTC).
-Tentative Launch Time (UTC): 2023-03-07T01:37Z
-Launch Livestream: H-3 - ALOS-3 - Mar 07 (estimated) - https://rocketlaunch.live/launch/alos-3 for info/stream
-Launch Time (IST): 2023-03-07 07:07:00+05:30
+Launch Description: A Relativity Space Terran 1 rocket will launch the "Good Luck, Have Fun" mission on Wednesday, March 8, 2023 at 6:00 PM (UTC).
+Tentative Launch Time (UTC): None
+Launch Livestream: Terran 1 - "Good Luck, Have Fun" - Wed Mar 08, 2023 18:00:00 UTC (L-1 days, 04:48:08) - https://rocketlaunch.live/launch/terran-1-flight-1 for info/stream
+Launch Time: TBD

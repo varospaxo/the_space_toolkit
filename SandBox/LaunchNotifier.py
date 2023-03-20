@@ -8,6 +8,7 @@ import os
 import time
 import subprocess
 
+
 #Read the API response
 url = "https://fdo.rocketlaunch.live/json/launches/next/5"
 response = urllib.request.urlopen(url)
@@ -24,7 +25,7 @@ mission_description = result['result'][0]['missions'][0]['description']
 launch_description = result['result'][0]['launch_description']
 launch_time = result['result'][0]['t0']
 quicktext = result['result'][0]['quicktext']
- 
+
 #Print in terminal
 print("Mission Name: "+launch_name)
 print("Vehicle Name: "+vehicle_name)
@@ -89,15 +90,24 @@ try:
     print(delta.total_seconds())
 except:
     pass
-
-rangetime = range(13000, 14000, 1)
-if (delta.total_seconds()) in rangetime:
-        rawpath = os.getcwd() + "\\SandBox\\mail.py"
-        path = rawpath.replace('\\', '/')
-        subprocess.call(['python', path])
-else:
+try:
+    rangetime = range(2800, 2900, 1)
+    if (delta.total_seconds()) in rangetime:
+            rawpath = os.getcwd() + "\\SandBox\\mail.py"
+            path = rawpath.replace('\\', '/')
+            subprocess.call(['python', path])
+            print("Mail Sent!")
+            time.sleep(100)
+    else:
+        pass
+except:
     pass
-            
+time.sleep(30)    
+rawpath = os.getcwd() + "\\SandBox\\LaunchNotifier.py"
+path = rawpath.replace('\\', '/')
+subprocess.call(['python', path])
+exit()
+          
 
 #     try:
 #         from_zone = tz.gettz('UTC')

@@ -48,7 +48,7 @@ def delete_login():
 
         cursor.execute (''' DELETE FROM users WHERE email = (%s) AND password = (%s)''', (email,password))
         count = cursor.rowcount
-        if count == 1:
+        if count >= 1:
             mysql.connection.commit()
             cursor.close()
             return """<html><body><a href="https://acegs.pythonanywhere.com/">Resubscribe</a></body></html>"""
