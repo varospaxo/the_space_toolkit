@@ -1,0 +1,10 @@
+Launch no.: 5
+Mission Name: EO MKA #4
+Vehicle Name: Soyuz-2
+Launchpad Name: LC-43/4
+None
+None
+Launchpad Country: Russia
+Mission Description: None
+Launch Description: A Russian Military Soyuz-2 rocket will launch the EO MKA #4 mission on Wednesday, March 29, 2023 at 8:00 PM (UTC).
+Launch Time (IST): 2023-03-30 01:30:00+05:30

@@ -63,8 +63,9 @@ def readapi():
             print("Tentative Launch Time (UTC): "+str(launch_time))
             print("Launch Livestream: "+quicktext)
             
-            f = open("launches.txt","a")
-            f.write("\n\nLaunch no.: " + str(x+1))
+            files = "launch"+str(x+1)+".txt"
+            f = open(str(files),"a")
+            f.write("Launch no.: " + str(x+1))
             f.write("\nMission Name: "+str(launch_name))
             f.write("\nVehicle Name: "+str(vehicle_name))
             f.write("\nLaunchpad Name: "+str(pad_name))
@@ -77,9 +78,11 @@ def readapi():
             f.write("\n"+"Launch Description: "+str(launch_description))
             f.write("\n"+timel)
             f.close()
-        path_current="./launches.txt"
-        movepath = "./launches_OP.txt" 
-        os.replace(path_current, movepath)
+            path_current=str(files)
+    
+            opfile = "launch"+str(x+1)+"_op.txt"
+            movepath = str(opfile) 
+            os.replace(path_current, movepath)
         time.sleep(15)
 readapi()
     

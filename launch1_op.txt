@@ -1,12 +1,10 @@
+Launch no.: 1
 Mission Name: "Good Luck, Have Fun"
 Vehicle Name: Terran 1
 Launchpad Name: SLC-16
-Launchpad Location Name: Cape Canaveral SFS
-Pad State: FL
-Pad State Name: Florida
+FL
+Florida
 Launchpad Country: United States
 Mission Description: None
 Launch Description: A Relativity Space Terran 1 rocket will launch the "Good Luck, Have Fun" mission on Thursday, March 23, 2023 at 2:00 AM (UTC).
-Tentative Launch Time (UTC): 2023-03-23T02:00Z
-Launch Livestream: Terran 1 - "Good Luck, Have Fun" - Thu Mar 23, 2023 02:00:00 UTC (L-06:41:03) - https://rocketlaunch.live/launch/terran-1-flight-1 for info/stream
 Launch Time (IST): 2023-03-23 07:30:00+05:30
