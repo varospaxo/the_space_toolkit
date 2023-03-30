@@ -16,5 +16,5 @@ urls = extractor.find_urls(str(images))
 print(urls)
 image_data = requests.get(urls[0]).content
 
-with open("image.jpg", "wb") as handler:
+with open("MPOW_current.jpg", "wb") as handler:
     handler.write(image_data)
