@@ -1,5 +1,5 @@
 1. Next 5 Space Launches
-2. People currently in space
+2. People currently in space (5 txt files)
 3. ISS live location (iframe)
 4. Spot the station widget
 5. Astronomy picture of the day

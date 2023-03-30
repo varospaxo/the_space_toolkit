@@ -1,0 +1,10 @@
+Launch no.: 5
+Mission Name: ViaSat 3 Americas
+Vehicle Name: Falcon Heavy
+Launchpad Name: LC-39A
+FL
+Florida
+Launchpad Country: United States
+Mission Description: None
+Launch Description: A SpaceX Falcon Heavy rocket will launch the ViaSat 3 Americas mission on Tuesday, April 18, 2023 at 11:36 PM (UTC).
+Launch Time: TBD
