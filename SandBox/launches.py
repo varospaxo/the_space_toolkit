@@ -79,8 +79,9 @@ def readapi():
             f.write("\n"+timel)
             f.close()
             path_current=str(files)
-    
-            opfile = "launch"+str(x+1)+"_op.txt"
+            rawpath = os.getcwd() + "\\SandBox\\backend_output\\launch"+str(x+1)+"_op.txt"
+            opfile = rawpath.replace('\\', '/')
+
             movepath = str(opfile) 
             os.replace(path_current, movepath)
         time.sleep(15)
