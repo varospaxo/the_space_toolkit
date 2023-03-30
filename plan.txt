@@ -1,9 +1,9 @@
 1. Next 5 Space Launches
 2. People currently in space
-3. ISS live location
+3. ISS live location (iframe)
 4. Spot the station widget
 5. Astronomy picture of the day
 6. Mars picture of the week
 7. Redirect to ISS pass notification system
-8. Redirect to Next space launch notification system
-9. Redirect to hourly space launch notification system
+8. Redirect to Next space launch notification system (https://launchmail.pythonanywhere.com/)
+9. Redirect to hourly space launch notification system (https://launchmail.pythonanywhere.com/)
