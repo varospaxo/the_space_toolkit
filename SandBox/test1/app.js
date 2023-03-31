@@ -8,14 +8,14 @@
 window.onload = function a(){
     fetch('hehe.txt')
     .then(
-        function(responce){
-            return responce.text();
+        function(responce1){
+            return responce1.text();
         }
     )
     .then(
-        function(data){
-            console.log(data);
-            document.getElementById('result').innerHTML = data ;
+        function(data1){
+            console.log(data1);
+            document.getElementById('result').innerHTML = data1 ;
         }
     )
 }
@@ -23,14 +23,14 @@ window.onload = function a(){
 window.onload = function b(){
     fetch('hehe2.txt')
     .then(
-        function(responce){
-            return responce.text();
+        function(responce2){
+            return responce2.text();
         }
     )
     .then(
-        function(data){
-            console.log(data);
-            document.getElementById('result2').innerHTML = data ;
+        function(data2){
+            console.log(data2);
+            document.getElementById('result2').innerHTML = data2 ;
         }
     )
 }
