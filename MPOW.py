@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-
 from urlextract import URLExtract
+
 url = "https://mars.nasa.gov/mars2020/multimedia/raw-images/image-of-the-week/"
 response = requests.get(url)
 

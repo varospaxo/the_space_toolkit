@@ -10,6 +10,7 @@ import os
 import urllib.request
 from datetime import datetime
 from dateutil import tz
+from urlextract import URLExtract
 
 def readapi():
     while True:
@@ -62,25 +63,30 @@ def readapi():
                 
             print("Tentative Launch Time (UTC): "+str(launch_time))
             print("Launch Livestream: "+quicktext)
-            
-            files = "launch"+str(x+1)+".txt"
+            hehe = URLExtract()
+            urls = hehe.find_urls(str(quicktext))
+            files = "launch"+str(x+1)+".html"
             f = open(str(files),"a")
-            f.write("Launch no.: " + str(x+1))
-            f.write("\nMission Name: "+str(launch_name))
-            f.write("\nVehicle Name: "+str(vehicle_name))
-            f.write("\nLaunchpad Name: "+str(pad_name))
+            f.write("Launch no.: " + str(x+1)+"</br>")
+            # f.write("\nMission Name: "+str(launch_name)+"</br>")
+            f.write("\n<a href="+urls[0]+">"+"Mission Name: "+str(launch_name)+"</a></br>")
+            f.write("\nVehicle Name: "+str(vehicle_name)+"</br>")
+            f.write("\nLaunchpad Name: "+str(pad_name)+"</br>")
             #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
-            f.write("\n"+str(pad_state))
-            f.write("\n"+str(pad_statename))
-            f.write("\n"+"Launchpad Country: "+str(pad_country))
+            # f.write("\n"+str(pad_state))
+            # f.write("\n"+str(pad_statename))
+            f.write("\n"+"Launch Country: "+str(pad_country)+"</br>")
             # f.write("\n"+pad_country)    
-            f.write("\n"+"Mission Description: "+ str(mission_description))
-            f.write("\n"+"Launch Description: "+str(launch_description))
-            f.write("\n"+"Quicktext: "+str(quicktext))            
+            # f.write("\n"+"Mission Description: "+ str(mission_description))
+            f.write("\n"+"Launch Description: "+str(launch_description)+"</br>")
+
+            
+            
+            # f.write("\n"+"Quicktext: "+str(quicktext))            
             f.write("\n"+timel)
             f.close()
             path_current=str(files)
-            rawpath = os.getcwd() + "\\SandBox\\backend_output\\launch"+str(x+1)+"_op.txt"
+            rawpath = os.getcwd() + "\\SandBox\\backend_output\\launch"+str(x+1)+"_op.html"
             opfile = rawpath.replace('\\', '/')
 
             movepath = str(opfile) 
