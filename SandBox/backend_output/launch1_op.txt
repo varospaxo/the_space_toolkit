@@ -6,5 +6,6 @@ CA
 California
 Launchpad Country: United States
 Mission Description: None
-Launch Description: A SpaceX Falcon 9 rocket will launch the Tranche-0 Launch 1 mission on Friday, March 31, 2023 at 2:29 PM (UTC).
-Launch Time (IST): 2023-03-31 19:59:00+05:30
+Launch Description: A SpaceX Falcon 9 rocket will launch the Tranche-0 Launch 1 mission. The launch date is currently targeted for April 01, 2023 (UTC).
+Quicktext: Falcon 9 - Tranche-0 Launch 1 - Apr 01 (estimated) - https://rocketlaunch.live/launch/tranche-0 for info/stream
+Launch Time: TBD

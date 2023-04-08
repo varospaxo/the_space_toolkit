@@ -76,6 +76,7 @@ def readapi():
             # f.write("\n"+pad_country)    
             f.write("\n"+"Mission Description: "+ str(mission_description))
             f.write("\n"+"Launch Description: "+str(launch_description))
+            f.write("\n"+"Quicktext: "+str(quicktext))            
             f.write("\n"+timel)
             f.close()
             path_current=str(files)

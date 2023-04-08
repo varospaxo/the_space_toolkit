@@ -7,4 +7,5 @@ California
 Launchpad Country: United States
 Mission Description: None
 Launch Description: A SpaceX Falcon 9 rocket will launch the Transporter-7 mission. The launch date is currently targeted for April 09, 2023 (UTC).
+Quicktext: Falcon 9 - Transporter-7 - Apr 09 (estimated) - https://rocketlaunch.live/launch/transporter-7 for info/stream
 Launch Time: TBD
