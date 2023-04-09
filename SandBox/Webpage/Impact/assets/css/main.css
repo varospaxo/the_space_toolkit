@@ -2706,7 +2706,7 @@ section {
 .iframe {
   display: inline-block;
   margin-right: 0;
-  height: 100%;
+  height: auto;
   width: 60vw;
   padding-right: 0%;
 }
