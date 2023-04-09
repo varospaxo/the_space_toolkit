@@ -12,7 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Poppins", sans-serif;
 }
@@ -145,11 +147,11 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs nav ol li+li {
+.breadcrumbs nav ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs nav ol li+li::before {
+.breadcrumbs nav ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: var(--color-secondary);
@@ -208,7 +210,8 @@ section {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #fff;
-  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  border-color: var(--color-primary) transparent var(--color-primary)
+    transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -259,7 +262,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .topbar .contact-info i a,
   .topbar .contact-info i span {
     font-size: 13px;
@@ -349,7 +351,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
@@ -376,7 +378,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -390,7 +392,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     width: 100%;
@@ -399,7 +401,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -437,11 +439,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-secondary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -453,7 +455,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -466,13 +468,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -529,7 +530,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -559,8 +560,8 @@ section {
     border: 1px solid #006459;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -660,7 +661,10 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(0, 131, 116, 0.4) 52%
+  );
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -813,7 +817,8 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 60px;
   border-radius: 15px;
@@ -836,7 +841,10 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(0, 131, 116, 0.4) 52%
+  );
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -1190,8 +1198,21 @@ section {
   padding-right: 50px;
 }
 
-.portfolio .portfolio-wrap:hover img {
+.portfolio  .portfolio-wrap:hover img {
   transform: scale(1.1);
+}
+.naam:hover img {
+  transform: scale(1.1);
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.naam {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
 /*--------------------------------------------------------------
@@ -1201,14 +1222,20 @@ section {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
 
@@ -1238,7 +1265,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -1786,7 +1812,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1825,14 +1851,14 @@ section {
   font-size: 14px;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   padding: 12px 15px;
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
@@ -1841,7 +1867,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 14px 45px;
@@ -1850,7 +1876,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(0, 131, 116, 0.8);
 }
 
@@ -2176,7 +2202,7 @@ section {
   margin: 0;
 }
 
-.blog .blog-details .meta-top ul li+li {
+.blog .blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2235,7 +2261,7 @@ section {
   display: inline-block;
 }
 
-.blog .blog-details .meta-bottom .tags li+li::before {
+.blog .blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--color-default);
   content: ",";
@@ -2301,7 +2327,7 @@ section {
   color: var(--color-default);
 }
 
-.blog .sidebar .sidebar-item+.sidebar-item {
+.blog .sidebar .sidebar-item + .sidebar-item {
   margin-top: 40px;
 }
 
@@ -2313,14 +2339,14 @@ section {
   border-radius: 50px;
 }
 
-.blog .sidebar .search-form form input[type=text] {
+.blog .sidebar .search-form form input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 50px;
   width: calc(100% - 60px);
 }
 
-.blog .sidebar .search-form form input[type=text]:focus {
+.blog .sidebar .search-form form input[type="text"]:focus {
   outline: none;
 }
 
@@ -2354,7 +2380,7 @@ section {
   padding: 0;
 }
 
-.blog .sidebar .categories ul li+li {
+.blog .sidebar .categories ul li + li {
   padding-top: 10px;
 }
 
@@ -2373,7 +2399,7 @@ section {
   font-size: 14px;
 }
 
-.blog .sidebar .recent-posts .post-item+.post-item {
+.blog .sidebar .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
 
@@ -2669,7 +2695,41 @@ section {
 }
 
 .isis {
-  height: 100%;
-  width: 100%;
-  
+  height: auto;
+  /* width: 100%; */
+  /* display: -moz-inline-box; */
+  /* float: left; */
+  margin-right: 0;
+  display: flex;
+  justify-content:space-between;
 }
+.iframe {
+  display: inline-block;
+  margin-right: 0;
+  height: 100%;
+  width: 60vw;
+  padding-right: 0%;
+}
+
+.widget1 {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  position: absolute;
+  overflow: hidden;
+  width: 310px;
+  height: 450px;
+}
+
+
+#sansare {
+  padding-right: 20px;
+}
+
+.pow{
+  display: flex;
+  justify-content:space-around;
+}
+
