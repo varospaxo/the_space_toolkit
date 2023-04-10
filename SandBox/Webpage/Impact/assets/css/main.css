@@ -22,7 +22,7 @@
 /* Colors */
 :root {
   --color-default: #222222;
-  --color-primary: #008374;
+  --color-primary: #003670;
   --color-secondary: #f85a40;
 }
 
@@ -45,7 +45,7 @@ a {
 }
 
 a:hover {
-  color: #00b6a1;
+  color: #0092b6;
   text-decoration: none;
 }
 
@@ -430,7 +430,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 600;
-    color: #006a5d;
+    color: #004a6a;
   }
 
   .navbar .dropdown ul a i {
@@ -500,7 +500,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: rgba(0, 68, 131, 0.9);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -546,7 +546,7 @@ section {
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
     color: #fff;
-    background: rgba(0, 131, 116, 0.8);
+    background: rgba(0, 44, 131, 0.8);
   }
 
   .navbar .dropdown ul,
@@ -599,7 +599,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 106, 93, 0.8);
+    background: rgba(0, 57, 106, 0.8);
     z-index: 9996;
   }
 }
@@ -663,7 +663,7 @@ section {
   height: 94px;
   background: radial-gradient(
     var(--color-primary) 50%,
-    rgba(0, 131, 116, 0.4) 52%
+    rgba(0, 63, 131, 0.783) 52%
   );
   border-radius: 50%;
   display: block;
@@ -685,7 +685,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 52, 131, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -1839,7 +1839,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #059652;
+  border: 3px solid #053896;
   border-top-color: #fff;
   animation: animate-loading 1s linear infinite;
 }
@@ -1989,7 +1989,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: #008d7d;
+  background: #00448d;
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -2733,3 +2733,16 @@ section {
   justify-content:space-around;
 }
 
+.rachit{
+  height: 10px;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+}
+model-viewer{
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  display: inline-block;
+  justify-content: left;
+}
