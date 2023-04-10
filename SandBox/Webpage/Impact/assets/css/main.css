@@ -2746,3 +2746,8 @@ model-viewer{
   display: inline-block;
   justify-content: left;
 }
+.form1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
