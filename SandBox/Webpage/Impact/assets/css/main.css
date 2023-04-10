@@ -182,7 +182,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: rgba(248, 90, 64, 0.8);
+  background: rgba(12, 49, 150, 0.8);
   color: #fff;
 }
 
@@ -744,7 +744,7 @@ section {
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  padding: 40px 0;
+  padding: 400px 0;
 }
 
 .clients .swiper {
@@ -765,8 +765,8 @@ section {
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 10px;
   background-color: #fff;
   opacity: 1;
   background-color: #ddd;
@@ -1637,7 +1637,7 @@ section {
 }
 
 .faq .accordion-button {
-  padding: 20px 50px 20px 20px;
+  padding: 40px 50px 20px 20px;
   font-weight: 600;
   border: 0;
   font-size: 18px;
@@ -1746,7 +1746,7 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #0b58ab;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1819,7 +1819,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #059652;
+  background: #055596;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1877,7 +1877,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: rgba(0, 131, 116, 0.8);
+  background: #0b58ab;
 }
 
 @keyframes animate-loading {
