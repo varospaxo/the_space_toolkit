@@ -500,7 +500,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 68, 131, 0.9);
+    background: rgba(0, 132, 255, 0.9);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -546,7 +546,7 @@ section {
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
     color: #fff;
-    background: rgba(0, 44, 131, 0.8);
+    background: rgba(0, 80, 241, 0.8);
   }
 
   .navbar .dropdown ul,
@@ -599,7 +599,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 57, 106, 0.8);
+    background: rgba(0, 107, 201, 0.8);
     z-index: 9996;
   }
 }
