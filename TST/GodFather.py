@@ -97,7 +97,7 @@ def readapi():
         f.write("\n"+timel)
         f.close()
         path_current=str(files)
-        rawpath = os.getcwd() + "\\launches\\launch"+str(x+1)+"_op.html"
+        rawpath = os.getcwd() + "\\mysite\\assets\\outputs\\launch"+str(x+1)+"_op.html"
         opfile = rawpath.replace('\\', '/')
 
         movepath = str(opfile) 
@@ -110,27 +110,27 @@ def apod():
     url= "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
     r = requests.get(url)
     data = ast.literal_eval(r.content.decode('utf-8'))
-    try:
-        print(data["url"])
-        print(data["media_type"])
-        if data["media_type"] == "image":
-            wget.download(data["url"], "./APOD_temp.jpg")
-            # img = plt.imread("./APOD_temp.jpg")
-            # plt.imshow(img)
-            # plt.show()
-            picture_path = "./APOD_current.jpg"
-            shutil.move("./APOD_temp.jpg", picture_path)
-            rawpath = os.getcwd() + "/APOD_current.jpg"
-            path = rawpath.replace('\\', '/')
-            # ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 0)
-            print(os.getcwd())
-            print(rawpath)
-            print(path)
-            print(picture_path)
-        else:
-            print("Content not an image!")
-            pass
-    except:
+    # try:
+    print(data["url"])
+    print(data["media_type"])
+    if data["media_type"] == "image":
+        wget.download(data["url"], "./APOD_temp.jpg" )
+        # img = plt.imread("./APOD_temp.jpg")
+        # plt.imshow(img)
+        # plt.show()
+        picture_path = "./mysite/assets/apod-mpow/APOD_current.jpg"
+        shutil.move("./APOD_temp.jpg", picture_path)
+        rawpath = os.getcwd() + "/APOD_current.jpg"
+        path = rawpath.replace('\\', '/')
+        # ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 0)
+        print(os.getcwd())
+        print(rawpath)
+        print(path)
+        print(picture_path)
+    else:
+        print("Content not an image!")
+        pass
+    # except:
         print("\nService unreachable!")
 apod()
 
@@ -150,7 +150,7 @@ def mpow():
     print(urls)
     image_data = requests.get(urls[0]).content
 
-    with open("MPOW_current.jpg", "wb") as handler:
+    with open(os.getcwd() + "\\mysite\\assets\\apod-mpow\\MPOW_current.jpg", "wb") as handler:
         handler.write(image_data)
 mpow()
 
@@ -166,7 +166,7 @@ def astronauts():
         spacecraft = astrodata['people'][x]['craft']
         print(spacecraft)
         files = "astronaut"+str(x+1)+".html"
-        f = open(os.getcwd() + "\\Astronauts\\"+str(files),"a")
+        f = open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(files),"a")
         f.write("Astronaut no.: " + str(x+1)+"</br>")
         f.write("\nAstronaut Name: "+str(name)+"</br>")
         f.write("\nSpacecraft Name: "+str(spacecraft)) 
@@ -185,7 +185,6 @@ def astronauts():
         print(thumbnail)
         print('')
         image_data = requests.get(thumbnail).content
-        image_name = "Astronaut"+str(x+1)+".jpg"
-        with open(os.getcwd() + "\\Astronauts\\"+str(image_name), "wb") as handler:
+        image_name = "astronaut"+str(x+1)+".jpg"
+        with open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(image_name), "wb") as handler:
             handler.write(image_data)
-astronauts()
