@@ -1,44 +1,24 @@
+console.log("wow")
+const table = document.getElementsByClassName('table')[0];
+console.log(table);
 
-const data = [
-    {
-       title : "aaa",
-       rating : "8.7"
-    },
-    {
-        title : "bbb",
-        rating : "8.5"
-     }
-];
+function createCard(number) {
+  const card = document.createElement('div');
+  card.className = "card";
 
-array.forEach((element, i ) => {
-    
-const mainn = document.querySelector(".mainn");
+  const topNumber = document.createElement('div');
+  topNumber.innerText = number;
+  
+  
+  const bottomNumber = document.createElement('div');
+  bottomNumber.className = "right";
+  bottomNumber.innerText = number;
 
+  card.append(topNumber);
+  card.append(bottomNumber);
 
-//create card
+  return card;
+  
+}
 
-const card = document.createElement('div');
-card.classList = 'card';
-
-const movieCard = `
- 
-<div class="col-xl-4 col-md-6">
-<article>
-
-  <div class="post-img">
-    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-  </div>
-
-  <p class="post-category">${data[i].title}</p> 
-
-  <h2 class="title">
-    <a href="email-notif1.html">${data[i].rating}</a>
-  </h2>
-</article>
-</div>
-
-`;
-
-card.innerHTML += movieCard;
-mainn.appendChild(card);
-});
+table.append(createCard(5));
