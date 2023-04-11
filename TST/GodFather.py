@@ -80,7 +80,7 @@ def readapi():
         f = open(str(files),"a")
         f.write("Launch no.: " + str(x+1)+"</br>")
         # f.write("\nMission Name: "+str(launch_name)+"</br>")
-        f.write("\n<a href="+urls[0]+">"+"Mission Name: "+str(launch_name)+"</a></br>")
+        f.write("\n<a href="+urls[0]+" "+"""target="_blank">"""+"Mission Name: "+str(launch_name)+"</a></br>")
         f.write("\nVehicle Name: "+str(vehicle_name)+"</br>")
         f.write("\nLaunchpad Name: "+str(pad_name)+"</br>")
         #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
