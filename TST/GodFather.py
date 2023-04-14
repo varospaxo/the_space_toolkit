@@ -188,3 +188,4 @@ def astronauts():
         image_name = "astronaut"+str(x+1)+".jpg"
         with open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(image_name), "wb") as handler:
             handler.write(image_data)
+astronauts()
