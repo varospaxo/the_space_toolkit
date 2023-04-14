@@ -1,6 +1,5 @@
 // var  = ''
 
-
 let url = "http://api.open-notify.org/astros.json";
 
 let options = {
@@ -36,7 +35,7 @@ async function foo() {
         
         // var html = '<body>Foo</body>';
         // card.innerHTML = '<img src= "/astronaut'+x+'">'
-        iframe.src = '/mysite/static/outputs/besu/astronaut' + x + '.html';
+        iframe.src = '/mysite/static/outputs/astronaut' + x + '.html';
         // iframe.src = '/astronaut' + x + '.jpg';
         iframe.height ='60%';
         iframe.width ='30%';
