@@ -10,8 +10,10 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="https://lh3.googleusercontent.com/a/AGNmyxZMW53eFbfoHrPhM9Kzj3M_zuuUp60o_D_uTNA4=s96-c-rg-br100" rel="icon">
-  <link href="https://lh3.googleusercontent.com/a/AGNmyxZMW53eFbfoHrPhM9Kzj3M_zuuUp60o_D_uTNA4=s96-c-rg-br100" rel="apple-touch-icon">
+  <link href="https://lh3.googleusercontent.com/a/AGNmyxZMW53eFbfoHrPhM9Kzj3M_zuuUp60o_D_uTNA4=s96-c-rg-br100"
+    rel="icon">
+  <link href="https://lh3.googleusercontent.com/a/AGNmyxZMW53eFbfoHrPhM9Kzj3M_zuuUp60o_D_uTNA4=s96-c-rg-br100"
+    rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,13 +72,22 @@
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#faq">About</a></li>
-          <li><a href="#about">ISS Live</a></li>
           <li><a href="#testimonials">Upcoming Launches</a></li>
+          <li><a href="#blog">Nut</a></li>
+          <li><a href="#about">ISS Live</a></li>
           <li><a href="#portfolio">APOD & MPOW</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="email-notif.html">Subscriptions</a></li>
-
-          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#team">Team</a></li> -->
+          <li class="dropdown"><a href="#"><span>Subscriptions</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="email-notif.html">Launch Notifier</a></li>
+              <li><a href="email-notif1.html">ISS Pass Notifier</a></li>
+              <!-- <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li> -->
+            </ul>
+          </li>
+          <!-- <li><a href="email-notif.html">Subscriptions</a></li> -->
+          <li><a href="#team">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -103,11 +114,11 @@
         <!-- 3d -->
         <div class="col-lg-6 order-1 order-lg-2">
           <!-- <div class="rachit"> -->
-          
+
           <!-- <img src="assets/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100"> -->
 
-          <model-viewer src="static/Among_Us_.glb" alt="VR Headset" disable-zoon auto-rotate
-            camera-controls ar ios-src="static/Among_Us_.glb"></model-viewer>
+          <model-viewer src="static/Among_Us_.glb" alt="VR Headset" disable-zoon auto-rotate camera-controls ar
+            ios-src="static/Among_Us_.glb"></model-viewer>
           <!-- <img src="static/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100"> -->
 
           <!-- </div> -->
@@ -250,32 +261,8 @@
 
     </div>
 
-    <!-- ======= Our Services Section ======= -->
-    <section id="about" class="services sections-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>ISS Live Location</h2>
-
-        </div>
-
-        <!-- <div class="row gy-5"> -->
-        <div class="isis">
-          <div class="iframe">
-            <iframe id="sansare" scrolling="no" src="static/ISSEmbed/hehe.html" height="450vh" width="800px"
-              frameborder="18"></iframe>
-            <div class="widget1">
-              <iframe class="iframe2" src='https://spotthestation.nasa.gov/widget/widget2.cfm' width='310' height='450'
-                frameborder='6'></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Our Services Section -->
-  
-  
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials ">
+    <section id="testimonials" class="testimonials sections-bg ">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -305,8 +292,8 @@
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p> -->
                   <div id="list">
-                    <p><iframe src="static/outputs/launch5_op.html" frameborder="0" height="auto"
-                        width="95%"></iframe></p>
+                    <p><iframe src="static/outputs/launch5_op.html" frameborder="0" height="auto" width="95%"></iframe>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -417,69 +404,44 @@
       </div>
     </section><!-- End Testimonials Section -->
 
-      <!-- services  -->
-      <section id="blog" class="blog sections-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="row gy-4 posts-list">
-  
-            <div class="col-xl-4 col-md-6">
-              <article>
-  
-                <div class="post-img">
-                  <img src="static/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                </div>
-  
-                <!-- <p class="post-category">Politics</p> -->
-  
-                <h2 class="title">
-                  <a href="email-notif1.html">Space Launch</a>
-                </h2>
-              </article>
-            </div><!-- End post list item -->
-  
-            <div class="col-xl-4 col-md-6">
-              <article>
-  
-                <div class="post-img">
-                  <img src="static/img/blog/blog-2.jpg" alt="" class="img-fluid">
-                </div>
-  
-                <!-- <p class="post-category">Sports</p> -->
-  
-                <h2 class="title">
-                  <a href="email-notif2.html">ISS Notification</a>
-                </h2>
-              </article>
-            </div><!-- End post list item -->
-  
-            <div class="col-xl-4 col-md-6">
-              <article>
-  
-                <div class="post-img">
-                  <img src="static/img/blog/blog-3.jpg" alt="" class="img-fluid">
-                </div>
-  
-                <!-- <p class="post-category">Subscriptions</p> -->
-  
-                <h2 class="title">
-                  <a href="email-notif3.html">List Of Astronauts</a>
-                </h2>
-              </article>
-            </div><!-- End post list item -->
-  
-  
-  
-  
-  
-  
-  
-          </div><!-- End blog posts list -->
-  
-  
-  
+    
+    <!-- services  -->
+    <section id="blog" class="blog">
+      <div id="cardSontainer"></div>  
+      <script type="module" src="/mysite/static/js/app.js"></script>
+    </section><!--
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="about" class="services sections-bg">
+    <div id="cardContainer">
+
+    
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>ISS Live Location</h2>
+
         </div>
-      </section><!--
+
+        <!-- <div class="row gy-5"> -->
+        <div class="isis">
+          <div class="iframe">
+            <iframe id="sansare" scrolling="no" src="static/ISSEmbed/hehe.html" height="450vh" width="800px"
+              frameborder="18"></iframe>
+            <div class="widget1">
+              <iframe class="iframe2" src='https://spotthestation.nasa.gov/widget/widget2.cfm' width='310' height='450'
+                frameborder='6'></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section><!-- End Our Services Section -->
+
+
+
+
+
 
 
     <!-- ======= Portfolio Section ======= -->
@@ -678,7 +640,8 @@
 
             <div class="info-container d-flex flex-column align-items-center justify-content-center">
               <div class="info-item d-flex">
-                <a href="https://goo.gl/maps/DC8x3VdR2Z3AMkkj7" target="_blank"><i class="bi bi-geo-alt flex-shrink-0"></i></a>
+                <a href="https://goo.gl/maps/DC8x3VdR2Z3AMkkj7" target="_blank"><i
+                    class="bi bi-geo-alt flex-shrink-0"></i></a>
                 <div>
                   <h4>Location:</h4>
                   <p>Atharva College Of Engineering</p>
@@ -686,7 +649,7 @@
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex">
-                <a href="mailto: crudespace@gmail.com" target="_blank"><i  class="bi bi-envelope flex-shrink-0"></i></a>
+                <a href="mailto: crudespace@gmail.com" target="_blank"><i class="bi bi-envelope flex-shrink-0"></i></a>
                 <div>
                   <h4>Email:</h4>
                   <p>crudespace@gmail.com</p></a>

@@ -20,7 +20,7 @@ async function foo() {
   const result = await something;
   const miro = result;
   // console.log(something); // or use the result variable
-      var cardContainer = document.getElementById("cardContainer");
+      var cardContainer = document.getElementById("cardSontainer");
 
       // Clear existing cards
       cardContainer.innerHTML = "";
@@ -33,8 +33,13 @@ async function foo() {
         // card.textContent = "Card ban gaye mkc" + (i + 1);
         var x = i +1
         var iframe = document.createElement('iframe');
+        
         // var html = '<body>Foo</body>';
-        iframe.src = '/hehe' + x + '.html';
+        // card.innerHTML = '<img src= "/astronaut'+x+'">'
+        iframe.src = '/mysite/static/js/astronaut' + x + '.html';
+        // iframe.src = '/astronaut' + x + '.jpg';
+        iframe.height ='60%';
+        iframe.width ='30%';
         var c = document.body.appendChild(iframe);
         console.log(c)
        
