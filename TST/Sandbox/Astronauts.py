@@ -9,7 +9,11 @@ for x in range(0, number):
     print(name)
     spacecraft = astrodata['people'][x]['craft']
     print(spacecraft)
-
+    files = "astronaut"+str(x+1)+".html"
+    f = open(os.getcwd() + "\\"+str(files),"a")
+    f.write("Astronaut no.: " + str(x+1)+"</br>")
+    f.write("\nAstronaut Name: "+str(name)+"</br>")
+    f.write("\nSpacecraft Name: "+str(spacecraft)) 
     url = "https://bing-image-search1.p.rapidapi.com/images/search"
     astronaut= name+"Astronaut"
     querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
@@ -26,5 +30,5 @@ for x in range(0, number):
     print('')
     image_data = requests.get(thumbnail).content
     image_name = "astronaut"+str(x+1)+".jpg"
-    with open(os.getcwd() + "\\AstronautImages\\"+str(image_name), "wb") as handler:
+    with open(os.getcwd() + "\\"+str(image_name), "wb") as handler:
         handler.write(image_data)
