@@ -1,0 +1,96 @@
+
+
+Pass no.1
+Start Azimuth: 203.82
+Start Azimuth Compass: SSW
+Start Time (Epoch): 1681690155
+Start Time (UTC): 2023-04-17 05:39:15
+Max Azimuth: 126.74
+Max Azimuth Compass: SE
+Max Elevation: 37.38
+Max Time (Epoch): 1681690470
+Max Time (UTC): 2023-04-17 05:44:30
+End Azimuth: 49.27
+End Azimuth Compass: NE
+End Time (Epoch): 1681690780
+End Time (UTC): 2023-04-17 05:49:40
+Magnitude: -1.4
+Pass Duration: 590
+Start Visibility (UTC): 2023-04-17 05:39:50
+Current Time: 17:09:45
+
+Pass no.2
+Start Azimuth: 188.52
+Start Azimuth Compass: S
+Start Time (Epoch): 1681773690
+Start Time (UTC): 2023-04-18 04:51:30
+Max Azimuth: 124.82
+Max Azimuth Compass: SE
+Max Elevation: 17.32
+Max Time (Epoch): 1681773980
+Max Time (UTC): 2023-04-18 04:56:20
+End Azimuth: 61.36
+End Azimuth Compass: ENE
+End Time (Epoch): 1681774265
+End Time (UTC): 2023-04-18 05:01:05
+Magnitude: -0.2
+Pass Duration: 400
+Start Visibility (UTC): 2023-04-18 04:54:25
+Current Time: 17:09:45
+
+Pass no.3
+Start Azimuth: 231.08
+Start Azimuth Compass: SW
+Start Time (Epoch): 1681862955
+Start Time (UTC): 2023-04-19 05:39:15
+Max Azimuth: 310.07
+Max Azimuth Compass: NW
+Max Elevation: 39.97
+Max Time (Epoch): 1681863275
+Max Time (UTC): 2023-04-19 05:44:35
+End Azimuth: 29.59
+End Azimuth Compass: NNE
+End Time (Epoch): 1681863590
+End Time (UTC): 2023-04-19 05:49:50
+Magnitude: -1.5
+Pass Duration: 485
+Start Visibility (UTC): 2023-04-19 05:41:45
+Current Time: 17:09:45
+
+Pass no.4
+Start Azimuth: 216.67
+Start Azimuth Compass: SW
+Start Time (Epoch): 1681946455
+Start Time (UTC): 2023-04-20 04:50:55
+Max Azimuth: 144.75
+Max Azimuth Compass: SE
+Max Elevation: 83.45
+Max Time (Epoch): 1681946775
+Max Time (UTC): 2023-04-20 04:56:15
+End Azimuth: 39.7
+End Azimuth Compass: NE
+End Time (Epoch): 1681947095
+End Time (UTC): 2023-04-20 05:01:35
+Magnitude: -2.4
+Pass Duration: 340
+Start Visibility (UTC): 2023-04-20 04:55:55
+Current Time: 17:09:45
+
+Pass no.5
+Start Azimuth: 260.36
+Start Azimuth Compass: W
+Start Time (Epoch): 1682035820
+Start Time (UTC): 2023-04-21 05:40:20
+Max Azimuth: 315.45
+Max Azimuth Compass: NW
+Max Elevation: 10.97
+Max Time (Epoch): 1682036085
+Max Time (UTC): 2023-04-21 05:44:45
+End Azimuth: 10.19
+End Azimuth Compass: N
+End Time (Epoch): 1682036345
+End Time (UTC): 2023-04-21 05:49:05
+Magnitude: 0.3
+Pass Duration: 370
+Start Visibility (UTC): 2023-04-21 05:42:55
+Current Time: 17:09:45

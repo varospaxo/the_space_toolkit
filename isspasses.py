@@ -34,6 +34,9 @@ def API():
             endAz = result['passes'][x]['endAz']
             endAzCompass = result['passes'][x]['endAzCompass']
             endUTC = result['passes'][x]['endUTC']
+            mag = result['passes'][x]['mag']
+            duration = result['passes'][x]['duration']
+            startVisibility = result['passes'][x]['startVisibility']
 
             print("\nPass no." , x+1)
             print("Start Azimuth: ",startAz)
@@ -49,8 +52,11 @@ def API():
             print("End Azimuth Compass: ",endAzCompass)
             print("End Time (Epoch): ",endUTC)
             print("End Time (UTC): ",datetime.datetime.fromtimestamp(endUTC))
+            print("Magnitude: "+ str(mag))
+            print("Pass Duration: ",duration)
+            print("Start Visibility (UTC): ",datetime.datetime.fromtimestamp(startVisibility))
 
-            file = open("passes.txt", "a")
+            file = open("iss_passes.txt", "a")
             print("Name of the satellite: ",satname)
             print("Number of passes in 10 days: ",passes)
             file.write("\n\nPass no."+str(x+1))
@@ -67,13 +73,16 @@ def API():
             file.write("\nEnd Azimuth Compass: "+str(endAzCompass))
             file.write("\nEnd Time (Epoch): "+str(endUTC))
             file.write("\nEnd Time (UTC): "+str(datetime.datetime.fromtimestamp(endUTC)))
+            file.write("\nMagnitude: "+str(mag))
+            file.write("\nPass Duration: "+str(duration))
+            file.write("\nStart Visibility (UTC): "+str(datetime.datetime.fromtimestamp(startVisibility)))
             t = time.localtime()
             current_time = time.strftime("%H:%M:%S", t)
             file.write ("\nCurrent Time: "+str(current_time))
             print("Current Time: ", current_time)
             file.close()
-        path_current="./passes_current.txt"
-        shutil.move("./passes.txt", path_current)
+        path_current="./iss_passes_current.txt"
+        shutil.move("./iss_passes.txt", path_current)
         time.sleep(5)
         t2.start()
 
@@ -85,7 +94,7 @@ def Mail_Trigger():
     # get day of week as an integer
     x = dt.weekday()
     print('Day of the week is:', x)
-    if x == 0:
+    if x == 5:
         rawpath = os.getcwd() + "\\mail.py"
         path = rawpath.replace('\\', '/')
         subprocess.call(['python', path])
