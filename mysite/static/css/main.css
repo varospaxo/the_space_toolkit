@@ -2702,10 +2702,14 @@ section {
   /* float: left; */
   margin-right: 0;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content:space-between;
+  flex-direction: row;
 }
 .iframe {
   display: inline-block;
+  align-items: center;
   margin-right: 0;
   height: auto;
   width: 60vw;
@@ -2713,12 +2717,13 @@ section {
 }
 
 .widget1 {
+  align-items: center;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -o-border-radius: 6px;
-  position: absolute;
+  /* position: absolute; */
   overflow: hidden;
   width: 310px;
   height: 450px;
@@ -2731,7 +2736,9 @@ section {
 
 .pow{
   display: flex;
+  align-items: center;
   justify-content:space-around;
+  flex-wrap: wrap;
 }
 
 .rachit{
