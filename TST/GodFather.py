@@ -170,22 +170,22 @@ def astronauts():
         f.write("Astronaut no.: " + str(x+1)+"</br>")
         f.write("\nAstronaut Name: "+str(name)+"</br>")
         f.write("\nSpacecraft Name: "+str(spacecraft)) 
-        url = "https://bing-image-search1.p.rapidapi.com/images/search"
-        astronaut= name+"Astronaut"
-        querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
+        # url = "https://bing-image-search1.p.rapidapi.com/images/search"
+        # astronaut= name+"Astronaut"
+        # querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
 
-        headers = {
-            "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
-            "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
-        }
+        # headers = {
+        #     "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
+        #     "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
+        # }
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        data = response.json()
-        thumbnail= data['value'][0]['thumbnailUrl'] 
-        print(thumbnail)
-        print('')
-        image_data = requests.get(thumbnail).content
-        image_name = "astronaut"+str(x+1)+".jpg"
-        with open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(image_name), "wb") as handler:
-            handler.write(image_data)
+        # response = requests.request("GET", url, headers=headers, params=querystring)
+        # data = response.json()
+        # thumbnail= data['value'][0]['thumbnailUrl'] 
+        # print(thumbnail)
+        # print('')
+        # image_data = requests.get(thumbnail).content
+        # image_name = "astronaut"+str(x+1)+".jpg"
+        # with open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(image_name), "wb") as handler:
+        #     handler.write(image_data)
 astronauts()
