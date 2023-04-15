@@ -242,7 +242,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #00796b;
+  background: #00338a;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -557,8 +557,8 @@ section {
     padding: 10px 0;
     margin: 10px 20px;
     transition: all 0.5s ease-in-out;
-    background-color: #007466;
-    border: 1px solid #006459;
+    background-color: #0023a0;
+    border: 1px solid #002f8d;
   }
 
   .navbar .dropdown > .dropdown-active,
@@ -844,7 +844,7 @@ section {
   margin-bottom: 20px;
   background: radial-gradient(
     var(--color-primary) 50%,
-    rgba(0, 131, 116, 0.4) 52%
+    rgba(0, 40, 184, 0.4) 52%
   );
   border-radius: 50%;
   display: inline-block;
@@ -864,7 +864,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 39, 165, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
