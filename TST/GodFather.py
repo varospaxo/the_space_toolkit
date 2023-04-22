@@ -33,10 +33,10 @@ def readapi():
 
     for x in range(0,5):
 
-        launch_name = result['result'][x]['name'] 
+        launch_name = result['result'][x]['name']
         vehicle_name = result['result'][x]['vehicle']['name']
         pad_name = result['result'][x]['pad']['name']
-        pad_location_name = result['result'][x]['pad']['location']['name']    
+        pad_location_name = result['result'][x]['pad']['location']['name']
         pad_state = result['result'][x]['pad']['location']['state']
         pad_statename = result['result'][x]['pad']['location']['statename']
         pad_country = result['result'][x]['pad']['location']['country']
@@ -54,7 +54,7 @@ def readapi():
         print(pad_state)
         print(pad_statename)
         print("Launchpad Country: "+pad_country)
-        print(pad_country)    
+        print(pad_country)
         print("Mission Description: "+ str(mission_description))
         print("Launch Description: "+launch_description)
         try:
@@ -71,36 +71,37 @@ def readapi():
         except TypeError:
             timel = "Launch Time: TBD"
             print()
-            
+
         print("Tentative Launch Time (UTC): "+str(launch_time))
         print("Launch Livestream: "+quicktext)
         hehe = URLExtract()
         urls = hehe.find_urls(str(quicktext))
         files = "launch"+str(x+1)+".html"
         f = open(str(files),"a")
-        f.write("Launch no.: " + str(x+1)+"</br>")
+        # f.write("Launch no.: " + str(x+1)+"</br>")
         # f.write("\nMission Name: "+str(launch_name)+"</br>")
-        f.write("\n<a href="+urls[0]+" "+"""target="_blank">"""+"Mission Name: "+str(launch_name)+"</a></br>")
+        f.write("""<link href="main.css" rel="stylesheet">""")
+        f.write("\n<a style=""text-decoration:none"" href="+urls[0]+" "+"""target="_blank">"""+"Mission Name: "+str(launch_name)+"</a></br>")
         f.write("\nVehicle Name: "+str(vehicle_name)+"</br>")
         f.write("\nLaunchpad Name: "+str(pad_name)+"</br>")
         #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
         # f.write("\n"+str(pad_state))
         # f.write("\n"+str(pad_statename))
         f.write("\n"+"Launch Country: "+str(pad_country)+"</br>")
-        # f.write("\n"+pad_country)    
+        # f.write("\n"+pad_country)
         # f.write("\n"+"Mission Description: "+ str(mission_description))
         f.write("\n"+"Launch Description: "+str(launch_description)+"</br>")
 
-        
-        
-        # f.write("\n"+"Quicktext: "+str(quicktext))            
+
+
+        # f.write("\n"+"Quicktext: "+str(quicktext))
         f.write("\n"+timel)
         f.close()
         path_current=str(files)
-        rawpath = os.getcwd() + "\\mysite\\assets\\outputs\\launch"+str(x+1)+"_op.html"
+        rawpath = "mysite/static/outputs/launch"+str(x+1)+"_op.html"
         opfile = rawpath.replace('\\', '/')
 
-        movepath = str(opfile) 
+        movepath = str(opfile)
         os.replace(path_current, movepath)
 readapi()
 
@@ -118,8 +119,8 @@ def apod():
         # img = plt.imread("./APOD_temp.jpg")
         # plt.imshow(img)
         # plt.show()
-        picture_path = "./mysite/assets/apod-mpow/APOD_current.jpg"
-        shutil.move("./APOD_temp.jpg", picture_path)
+        picture_path = "./mysite/static/apod-mpow/APOD_current.jpg"
+        shutil.move("APOD_temp.jpg", picture_path)
         rawpath = os.getcwd() + "/APOD_current.jpg"
         path = rawpath.replace('\\', '/')
         # ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 0)
@@ -150,50 +151,67 @@ def mpow():
     print(urls)
     image_data = requests.get(urls[0]).content
 
-    with open(os.getcwd() + "\\mysite\\assets\\apod-mpow\\MPOW_current.jpg", "wb") as handler:
+    with open(os.getcwd() + "/mysite/static/apod-mpow/MPOW_current.jpg", "wb") as handler:
         handler.write(image_data)
 mpow()
 
-#astonauts
+# astonauts
 def astronauts():
     astroresponse = requests.get("http://api.open-notify.org/astros.json")
     astrodata = astroresponse.json()
     number = astrodata['number']
-    print("Number of people in space = "+str(number))
+    print("\nNumber of people in space = "+str(number))
     for x in range(0, number):
         name = astrodata['people'][x]['name']
         print(name)
         spacecraft = astrodata['people'][x]['craft']
         print(spacecraft)
-        files = "astronaut_op"+str(x+1)+".html"
-        # f = open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(files),"a")
+        url = "https://bing-image-search1.p.rapidapi.com/images/search"
+        astronaut= name+"Astronaut"
+        querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
+
+        headers = {
+            "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
+            "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        time.sleep(2)
+        data = response.json()
+        thumbnail= data['value'][0]['thumbnailUrl']
+        print(thumbnail)
+        files = "astronaut"+str(x+1)+".html"
         f = open(str(files),"a")
-        f.write("Astronaut no.: " + str(x+1)+"</br>")
+        f.write("""<link href="main.css" rel="stylesheet">""")
+        f.write("\n<h2><a href="+""+str(thumbnail)+""+" target=_blank"">Astronaut " + str(x+1)+"</a></h2></br>")
         f.write("\nAstronaut Name: "+str(name)+"</br>")
         f.write("\nSpacecraft Name: "+str(spacecraft))
         f.close()
         path_current=str(files)
-        rawpath = os.getcwd() + "\\mysite\\assets\\outputs\\astronaut"+str(x+1)+".html"
+        rawpath = os.getcwd() + "\\mysite\\static\\outputs\\astronaut"+str(x+1)+".html"
         opfile = rawpath.replace('\\', '/')
         # print (opfile)
-        movepath = str(opfile) 
+        movepath = str(opfile)
         os.replace(path_current, movepath)
-        # url = "https://bing-image-search1.p.rapidapi.com/images/search"
-        # astronaut= name+"Astronaut"
-        # querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
-
-        # headers = {
-        #     "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
-        #     "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
-        # }
-
-        # response = requests.request("GET", url, headers=headers, params=querystring)
-        # data = response.json()
-        # thumbnail= data['value'][0]['thumbnailUrl'] 
-        # print(thumbnail)
         # print('')
         # image_data = requests.get(thumbnail).content
         # image_name = "astronaut"+str(x+1)+".jpg"
         # with open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(image_name), "wb") as handler:
         #     handler.write(image_data)
 astronauts()
+def reload():
+    username = 'thespacetoolkit'
+    token = 'c2fc2b11e2a66d90fa8914de9520a23152f1dcd5'
+    domain_name = 'thespacetoolkit.pythonanywhere.com'
+    response = requests.post(
+        'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain_name}/reload/'.format(
+            username=username, domain_name=domain_name
+        ),
+        headers={'Authorization': 'Token {token}'.format(token=token)}
+    )
+    time.sleep(10)
+    if response.status_code == 200:
+        print(response.content)
+    else:
+        print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
+reload()
