@@ -81,7 +81,7 @@ def readapi():
         # f.write("Launch no.: " + str(x+1)+"</br>")
         # f.write("\nMission Name: "+str(launch_name)+"</br>")
         f.write("""<link href="main.css" rel="stylesheet">""")
-        f.write("\n<a style=""text-decoration:none"" href="+urls[0]+" "+"""target="_blank">"""+"Mission Name: "+str(launch_name)+"</a></br>")
+        f.write("\n<h3><a style=""text-decoration:none"" href="+urls[0]+" "+"""target="_blank">"""+str(launch_name)+"</a></h3>")
         f.write("\nVehicle Name: "+str(vehicle_name)+"</br>")
         f.write("\nLaunchpad Name: "+str(pad_name)+"</br>")
         #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
