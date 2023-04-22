@@ -165,11 +165,19 @@ def astronauts():
         print(name)
         spacecraft = astrodata['people'][x]['craft']
         print(spacecraft)
-        files = "astronaut"+str(x+1)+".html"
-        f = open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(files),"a")
+        files = "astronaut_op"+str(x+1)+".html"
+        # f = open(os.getcwd() + "\\mysite\\assets\\outputs\\"+str(files),"a")
+        f = open(str(files),"a")
         f.write("Astronaut no.: " + str(x+1)+"</br>")
         f.write("\nAstronaut Name: "+str(name)+"</br>")
-        f.write("\nSpacecraft Name: "+str(spacecraft)) 
+        f.write("\nSpacecraft Name: "+str(spacecraft))
+        f.close()
+        path_current=str(files)
+        rawpath = os.getcwd() + "\\mysite\\assets\\outputs\\astronaut"+str(x+1)+".html"
+        opfile = rawpath.replace('\\', '/')
+        # print (opfile)
+        movepath = str(opfile) 
+        os.replace(path_current, movepath)
         # url = "https://bing-image-search1.p.rapidapi.com/images/search"
         # astronaut= name+"Astronaut"
         # querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
