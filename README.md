@@ -16,7 +16,7 @@ This website provides information on recent space research projects and their be
 
 Deployed Code:<br>
 [Home Page](https://thespacetoolkit.pythonanywhere.com)<br>
-[Launch Subscriptiom](https://launchmail.pythonanywhere.com)<br>
+[Launch Subscription](https://launchmail.pythonanywhere.com)<br>
 [ISS Subscription](https://acegs.pythonanywhere.com)<br>
 
 <br><H2><B>Tech Stack Used</H2></B>
