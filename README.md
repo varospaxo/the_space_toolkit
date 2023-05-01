@@ -7,7 +7,7 @@ Credits:<br>
 [@mack3y](https://github.com/mack3y)<br>
 [@adityasansare](https://github.com/adityasansare)<br><br>
 
-![TST Front SS](https://user-images.githubusercontent.com/64273563/235473823-ebb31cab-63c1-45ae-8750-f0dd60414bf0.png)
+[![TST Front SS](https://user-images.githubusercontent.com/64273563/235473823-ebb31cab-63c1-45ae-8750-f0dd60414bf0.png)](https://thespacetoolkit.pythonanywhere.com)<br>
 
 This space toolkit website aims to provide the latest space news and discoveries, live coverage of space flights and the science of space travel. 
 With unique features that set it apart from other space news websites, it strives to bring you the most interesting and informative articles about the universe.
@@ -37,25 +37,26 @@ Deployed Code:<br>
 <B><H2>Snapshots</H2></B>
 
 <B>Upcoming Launches Tab</B>
-![TST Front SS1](https://user-images.githubusercontent.com/64273563/235475816-ffe22be2-9070-4c19-8025-2606df658c5c.png)
+[![TST Front SS1](https://user-images.githubusercontent.com/64273563/235475816-ffe22be2-9070-4c19-8025-2606df658c5c.png)](https://thespacetoolkit.pythonanywhere.com/#launches)
 <br>
 
+
 <B>Astronauts Currently in Space</B>
-![TST Front SS2](https://user-images.githubusercontent.com/64273563/235474599-98e228d7-897c-4172-9a85-97d19a119304.png)
+[![TST Front SS2](https://user-images.githubusercontent.com/64273563/235474599-98e228d7-897c-4172-9a85-97d19a119304.png)](https://thespacetoolkit.pythonanywhere.com/#astronauts)
 <br>
 
 <B>ISS Live Location</B>
-![TST Front SS3](https://user-images.githubusercontent.com/64273563/235474704-35ee0c04-cec3-46a3-857c-0411f6aee9b3.png)
+[![TST Front SS3](https://user-images.githubusercontent.com/64273563/235474704-35ee0c04-cec3-46a3-857c-0411f6aee9b3.png)](https://thespacetoolkit.pythonanywhere.com/#isslocation)
 <br>
 
 <B>APOD & MPOW</B>
-![TST Front SS4](https://user-images.githubusercontent.com/64273563/235474800-14ceaebb-2193-4b10-951f-8ce38264ee23.png)
+[![TST Front SS4](https://user-images.githubusercontent.com/64273563/235474800-14ceaebb-2193-4b10-951f-8ce38264ee23.png)](https://thespacetoolkit.pythonanywhere.com/#gallery)
 <br>
 
 <B>Subscription Service - Launch Notification</B>
-![TST Email1 SS](https://user-images.githubusercontent.com/64273563/235474910-6b6b13ce-773e-4c1b-a3f9-b4b799033110.png)
+[![TST Email1 SS](https://user-images.githubusercontent.com/64273563/235474910-6b6b13ce-773e-4c1b-a3f9-b4b799033110.png)](https://thespacetoolkit.pythonanywhere.com/email-notif.html)
 <br>
 
 <B>Subscription Service - ISS Pass Notification</B>
-![TST Email2 SS](https://user-images.githubusercontent.com/64273563/235474934-82e4c653-e8b0-4c22-843b-6176750da9b9.png)
+[![TST Email2 SS](https://user-images.githubusercontent.com/64273563/235474934-82e4c653-e8b0-4c22-843b-6176750da9b9.png)](https://thespacetoolkit.pythonanywhere.com/email-notif1.html)
 <br>
