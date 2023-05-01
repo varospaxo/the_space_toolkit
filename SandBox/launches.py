@@ -67,9 +67,15 @@ def readapi():
             urls = hehe.find_urls(str(quicktext))
             files = "launch"+str(x+1)+".html"
             f = open(str(files),"a")
+<<<<<<< HEAD
             f.write("Launch no.: " + str(x+1)+"</br>")
             # f.write("\nMission Name: "+str(launch_name)+"</br>")
             f.write("\n<a href="+urls[0]+">"+"Mission Name: "+str(launch_name)+"</a></br>")
+=======
+            # f.write("Launch no.: " + str(x+1)+"</br>")
+            # f.write("\nMission Name: "+str(launch_name)+"</br>")
+            f.write("\n Mission Name: "+str(launch_name)+"</br>")
+>>>>>>> frontend
             f.write("\nVehicle Name: "+str(vehicle_name)+"</br>")
             f.write("\nLaunchpad Name: "+str(pad_name)+"</br>")
             #print("Launchpad Location: "+str(pad_location_name)+", "+(pad_statename)+", "+(pad_state))
@@ -83,7 +89,12 @@ def readapi():
             
             
             # f.write("\n"+"Quicktext: "+str(quicktext))            
+<<<<<<< HEAD
             f.write("\n"+timel)
+=======
+            f.write("\n"+timel+"</br>")
+            f.write("\n<a href="+urls[0]+" target='_blank'>"+"Link"+"</a></br>")
+>>>>>>> frontend
             f.close()
             path_current=str(files)
             rawpath = os.getcwd() + "\\SandBox\\backend_output\\launch"+str(x+1)+"_op.html"
