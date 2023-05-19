@@ -59,8 +59,4 @@ Deployed Code:<br>
 
 <B>Subscription Service - ISS Pass Notification</B>
 [![TST Email2 SS](https://user-images.githubusercontent.com/64273563/235474934-82e4c653-e8b0-4c22-843b-6176750da9b9.png)](https://thespacetoolkit.pythonanywhere.com/email-notif1.html)
-<<<<<<< Updated upstream
 <br>
-=======
-<br>
->>>>>>> Stashed changes
