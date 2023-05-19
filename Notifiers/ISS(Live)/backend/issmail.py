@@ -22,12 +22,12 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
   #print(x)
-  file = open("emails.txt", "a")
+  file = open("hehe.txt", "a")
   file.write(str(x))
   file.close()
-path_current="./emails_current.txt"
-shutil.move("./emails.txt", path_current)
-with open("./emails_current.txt") as f:
+path_current="./hehe_current.txt"
+shutil.move("./hehe.txt", path_current)
+with open("./hehe_current.txt") as f:
     body = f.read()
     #print (body)
     emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", body)
@@ -38,24 +38,17 @@ receiver_email = "vedantfar@gmail.com"
 password = ""
 cc = ""
 bcc = emails
-# bcc = "farkadevedant@gmail.com, varospaxo@gmail.com"
-
-with open('./launches_Notifier_OP.txt') as file:
-  sub = file.readline().strip('Mission Name: ')
-  # print (sub)
 
 message = MIMEMultipart("alternative")
-subject = "Next Launch "+sub+" in one hour!"
-message["Subject"] = subject
+message["Subject"] = "Next 10 Days ISS Visible Passes (Beta)"
 message["From"] = sender_email
 message["To"] = receiver_email
 message["Cc"] = cc
 message["Bcc"] = ", ".join(bcc)
-# message["Bcc"] = bcc
 # print (message["Bcc"])
 
 # string to store the body of the mail
-with open('./launches_Notifier_OP.txt') as f:
+with open('iss_passes_current.txt') as f:
     body = f.read()
 
 # attach the body with the msg instance

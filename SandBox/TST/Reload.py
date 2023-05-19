@@ -1,7 +1,7 @@
 import requests
-username = 'thespacetoolkit'
-token = 'c2fc2b11e2a66d90fa8914de9520a23152f1dcd5'
-domain_name = 'thespacetoolkit.pythonanywhere.com'
+username = ''
+token = ''
+domain_name = ''
 response = requests.post(
     'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain_name}/reload/'.format(
         username=username, domain_name=domain_name

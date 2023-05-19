@@ -19,7 +19,7 @@ for x in range(0, number):
     querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
 
     headers = {
-        "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
+        "X-RapidAPI-Key": "",
         "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
     }
 

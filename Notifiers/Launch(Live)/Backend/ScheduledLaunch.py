@@ -56,6 +56,7 @@ while True:
     print("Launch Livestream: "+quicktext)
 
     #Print in file
+    footer = "To unsubscribe, visit: https://launchmail.pythonanywhere.com/delete"
     f = open("./launches_Notifier.txt","a")
     f.write("Mission Name: "+str(launch_name))
     f.write("\nVehicle Name: "+str(vehicle_name))
@@ -71,6 +72,8 @@ while True:
     f.write("\nTentative Launch Time (UTC): "+str(launch_time))
     f.write("\nLaunch Livestream: "+quicktext)
     f.write("\n"+timel)
+    f.write("\n"+str(footer))
+
     f.close()
     #Cache file
     path_current="./launches_Notifier.txt"
@@ -91,7 +94,7 @@ while True:
     except:
         pass
     try:
-        rangetime = range(3600, 3700, 1)
+        rangetime = range(3600, 3720, 1)
         if (delta.total_seconds()) in rangetime:
                 rawpath = os.getcwd() + "\\mail.py"
                 path = rawpath.replace('\\', '/')
@@ -128,7 +131,7 @@ while True:
         # enabled='true'
         # interval= "daily"
         description= str(only_t)
-        id=356533
+        id=356673
         response = requests.patch(f'https://{host}/api/v0/user/{username}/schedule/{id}/'.format(
                 host=host, username=username, id=id
             ),

@@ -94,11 +94,12 @@ def readapi():
 
 
 
+
         # f.write("\n"+"Quicktext: "+str(quicktext))
         f.write("\n"+timel)
         f.close()
         path_current=str(files)
-        rawpath = "mysite/static/outputs/launch"+str(x+1)+"_op.html"
+        rawpath = "/home/thespacetoolkit/mysite/static/outputs/launch"+str(x+1)+"_op.html"
         opfile = rawpath.replace('\\', '/')
 
         movepath = str(opfile)
@@ -155,7 +156,7 @@ def mpow():
         handler.write(image_data)
 mpow()
 
-# astonauts
+#astonauts
 def astronauts():
     astroresponse = requests.get("http://api.open-notify.org/astros.json")
     astrodata = astroresponse.json()
@@ -171,7 +172,7 @@ def astronauts():
         querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
 
         headers = {
-            "X-RapidAPI-Key": "7f4205c376mshabb48c2be654f3ep15eb79jsn25209fe5e03b",
+            "X-RapidAPI-Key": "",
             "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
         }
 
@@ -193,6 +194,20 @@ def astronauts():
         # print (opfile)
         movepath = str(opfile)
         os.replace(path_current, movepath)
+        # url = "https://bing-image-search1.p.rapidapi.com/images/search"
+        # astronaut= name+"Astronaut"
+        # querystring = {"q":"{Astronaut}".format(Astronaut=str(astronaut)),"count":"1"}
+
+        # headers = {
+        #     "X-RapidAPI-Key": "",
+        #     "X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
+        # }
+
+        # response = requests.request("GET", url, headers=headers, params=querystring)
+        # time.sleep(2)
+        # data = response.json()
+        # thumbnail= data['value'][0]['thumbnailUrl']
+        # print(thumbnail)
         # print('')
         # image_data = requests.get(thumbnail).content
         # image_name = "astronaut"+str(x+1)+".jpg"
@@ -201,7 +216,7 @@ def astronauts():
 astronauts()
 def reload():
     username = 'thespacetoolkit'
-    token = 'c2fc2b11e2a66d90fa8914de9520a23152f1dcd5'
+    token = ''
     domain_name = 'thespacetoolkit.pythonanywhere.com'
     response = requests.post(
         'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain_name}/reload/'.format(

@@ -8,10 +8,10 @@ import os
 import shutil
 
 # mydb = mysql.connector.connect(
-#   host="acegs.mysql.pythonanywhere-services.com",
-#   user="acegs",
-#   password="hehe#$123",
-#   database="acegs$default"
+#   host="",
+#   user="",
+#   password="",
+#   database=""
 # )
 
 # mycursor = mydb.cursor()
@@ -34,11 +34,11 @@ import shutil
 #     print (emails)
 
 sender_email = "crudespace@gmail.com"
-receiver_email = "vedantfar@gmail.com"
-password = "qngnwmlokpwxtoka"
+receiver_email = ""
+password = ""
 cc = ""
 # bcc = emails
-bcc = "farkadevedant@gmail.com, varospaxo@gmail.com"
+bcc = "varospaxo@gmail.com"
 
 with open('./SandBox/launches_Notifier_OP.txt') as file:
   sub = file.readline().strip('Mission Name: ')

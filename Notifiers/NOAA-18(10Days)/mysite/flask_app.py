@@ -2,12 +2,12 @@ from flask import Flask,render_template, request
 from flask_mysqldb import MySQL
 import json
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='')
 
-app.config['MYSQL_HOST'] = 'acegs.mysql.pythonanywhere-services.com'
-app.config['MYSQL_USER'] = 'acegs'
-app.config['MYSQL_PASSWORD'] = 'hehe#$123'
-app.config['MYSQL_DB'] = 'acegs$default'
+app.config['MYSQL_HOST'] = ''
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = ''
 
 mysql = MySQL(app)
 
@@ -53,9 +53,9 @@ def delete_login():
             cursor.close()
             return """<html><body><a href="https://acegs.pythonanywhere.com/">Resubscribe</a></body></html>"""
         elif count == 0:
-            return "Email or Password is incorrect."
+            return "Email or Password is incorrect. For support contact crudespace@gmail.com."
         else:
-            return "Something went wrong. Please try again later."
+            return "Something went wrong. Please try again later. For support contact crudespace@gmail.com."
 
 
 
@@ -77,4 +77,8 @@ def handle_request():
     cursor.close()
 
     return json_data
+
+@app.route('/reload', methods = ['POST', 'GET'])
+def reload():
+    return render_template('script.html')
 

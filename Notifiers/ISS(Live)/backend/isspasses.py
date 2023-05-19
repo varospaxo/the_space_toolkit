@@ -23,7 +23,7 @@ def API():
         passes = result['info']['passescount']
         print("Name of the satellite: ",satname)
         print("Number of passes in 10 days: ",passes)
-        if passes > 0:
+        if passes != 0:
             for x in range(0,passes):
                 startAz = result['passes'][x]['startAz']
                 startAzCompass = result['passes'][x]['startAzCompass']
@@ -82,17 +82,15 @@ def API():
                 file.write ("\nCurrent Time: "+str(current_time))
                 print("Current Time: ", current_time)
                 file.close()
-            path_current="./iss_passes_current.txt"
-            shutil.move("./iss_passes.txt", path_current)
-            time.sleep(5)
-            t2.start()
-        else:
+        elif passes == 0:
             print("No visible ISS passes this week. Stay tuned for next week!")
             file = open("iss_passes.txt", "a")
             print("Name of the satellite: ",satname)
             print("Number of passes in 10 days: ",passes)
             file.write("No visible ISS passes this week. Stay tuned for next week!")
             file.close()
+        else:
+            pass
         path_current="./iss_passes_current.txt"
         shutil.move("./iss_passes.txt", path_current)
         time.sleep(5)
@@ -106,8 +104,8 @@ def Mail_Trigger():
     # get day of week as an integer
     x = dt.weekday()
     print('Day of the week is:', x)
-    if x == 0:
-        rawpath = os.getcwd() + "\\mail.py"
+    if x == 4:
+        rawpath = os.getcwd() + "\\issmail.py"
         path = rawpath.replace('\\', '/')
         subprocess.call(['python', path])
         print("Mail sent!")

@@ -8,10 +8,10 @@ import os
 import shutil
 
 mydb = mysql.connector.connect(
-  host="acegs.mysql.pythonanywhere-services.com",
-  user="acegs",
-  password="hehe#$123",
-  database="acegs$default"
+  host="",
+  user="",
+  password="",
+  database=""
 )
 
 mycursor = mydb.cursor()
@@ -34,8 +34,8 @@ with open("./hehe_current.txt") as f:
     print (emails)
 
 sender_email = "crudespace@gmail.com"
-receiver_email = "vedantfar@gmail.com"
-password = "qngnwmlokpwxtoka"
+receiver_email = ""
+password = ""
 cc = ""
 bcc = emails
 
