@@ -30,7 +30,7 @@ shutil.move("./emails.txt", path_current)
 with open("./emails_current.txt") as f:
     body = f.read()
     #print (body)
-    emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", body)
+    emails = re.findall(r"[A-Za-z0-9\.\-+_]+@[A-Za-z0-9\.\-+_]+\.[A-Za-z]+", body)
     # print (emails)
 for emails in email:
   sender_email = "crudespace@gmail.com"
